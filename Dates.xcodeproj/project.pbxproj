@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A761198256E6673007F534C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A761197256E6673007F534C /* EventModel.swift */; };
+		3A761198256E6673007F534C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A761197256E6673007F534C /* Event.swift */; };
 		3A7ACDCD254EDBF10013ADC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ACDCC254EDBF10013ADC5 /* AppDelegate.swift */; };
 		3A7ACDCF254EDBF10013ADC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ACDCE254EDBF10013ADC5 /* SceneDelegate.swift */; };
 		3A7ACDD4254EDBF10013ADC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7ACDD2254EDBF10013ADC5 /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A761197256E6673007F534C /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		3A761197256E6673007F534C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3A7ACDC9254EDBF10013ADC5 /* Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7ACDCC254EDBF10013ADC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A7ACDCE254EDBF10013ADC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		3A5B52B0256AC3FB00D414E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A761197256E6673007F534C /* EventModel.swift */,
+				3A761197256E6673007F534C /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				3A7ACDCD254EDBF10013ADC5 /* AppDelegate.swift in Sources */,
 				3A7ACDF3254EE10B0013ADC5 /* DateCell.swift in Sources */,
 				3ACBB9ED254F2E2A00E2E15B /* EditingTableViewController.swift in Sources */,
-				3A761198256E6673007F534C /* EventModel.swift in Sources */,
+				3A761198256E6673007F534C /* Event.swift in Sources */,
 				3A7ACDF0254EE08A0013ADC5 /* TableViewController.swift in Sources */,
 				3A7ACDCF254EDBF10013ADC5 /* SceneDelegate.swift in Sources */,
 			);
@@ -445,7 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = LT.Birthdays;
+				PRODUCT_BUNDLE_IDENTIFIER = LT.Dates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = LT.Birthdays;
+				PRODUCT_BUNDLE_IDENTIFIER = LT.Dates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

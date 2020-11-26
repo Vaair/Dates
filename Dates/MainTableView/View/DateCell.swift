@@ -16,10 +16,9 @@ class DateCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var eventLabel: UILabel!
+    @IBOutlet weak var nameEventLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var daysBeforeTheEventLabel: UILabel!
-    @IBOutlet weak var daysLabel: UILabel!
 
 }

@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct EventModel {
+struct Event {
     var icon: Data?
-    var event: String
-    var date: Date
-    var daysBeforeTheEventLabel: Int
-    var days = "дн."
+    var nameEvent: String
+    var date: String
+    var daysBeforeTheEvent: Int
 }
