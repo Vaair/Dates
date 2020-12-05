@@ -14,11 +14,16 @@ class TableViewController: UITableViewController {
     private let searchController = UISearchController(searchResultsController: nil)
     
     private var events: [Event] = [Event(icon: nil,
-                                         nameEvent: "День рождения Леры Тарасенко Андреевны",
+                                         nameEvent: "День рождения Анастасии Ивановны",
                                          date: "16.09.1998",
                                          daysBeforeTheEvent: 200),
-    Event(nameEvent: "Свадьба мамы", date: "30.09.2020", daysBeforeTheEvent: 300),
-    Event(icon: nil, nameEvent: "Юбилей", date: "12.07.2019", daysBeforeTheEvent: 54)]
+                                   Event(nameEvent: "Свадьба мамы",
+                                         date: "30.09.2020",
+                                         daysBeforeTheEvent: 300),
+                                   Event(icon: nil,
+                                         nameEvent: "Юбилей",
+                                         date: "12.07.2019",
+                                         daysBeforeTheEvent: 54)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +60,14 @@ class TableViewController: UITableViewController {
         if let icon = event.icon {
             image = UIImage(data: icon)
         } else {
+            //image = UIImage(systemName: "pencil.circle")
             image = UIImage(systemName: "photo.fill.on.rectangle.fill")
         }
         
+        
         cell.iconImage.image = image
+        
+        
         cell.nameEventLabel.text = event.nameEvent
         cell.dateLabel.text = event.date
         cell.daysBeforeTheEventLabel.text = "\(event.daysBeforeTheEvent) \n дн."
@@ -66,6 +75,9 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    private func filterDates(){
+       // events.sorted { $0.}
+    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -103,16 +115,16 @@ class TableViewController: UITableViewController {
      */
     
     
-     // MARK: - Navigation
-     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "segueDetail" {
-             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-             let event = events[indexPath.row]
-             let detailEventVC = segue.destination as! DetailTableViewController
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueDetail" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let event = events[indexPath.row]
+            let detailEventVC = segue.destination as! DetailTableViewController
             detailEventVC.currentEvent = event
-         }
-     }
-     
+        }
+    }
+    
     
 }

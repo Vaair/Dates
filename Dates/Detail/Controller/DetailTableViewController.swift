@@ -19,15 +19,17 @@ class DetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image: UIImage?
+        let imageIcon: UIImage?
         
         if let icon = currentEvent.icon {
-            image = UIImage(data: icon)
+            imageIcon = UIImage(data: icon)
         } else {
-            image = UIImage(systemName: "photo.fill.on.rectangle.fill")
+            imageIcon = UIImage(systemName: "photo.fill.on.rectangle.fill")
         }
         
-        self.iconImage.image = image
+        
+       
+        self.iconImage.image = imageIcon
         self.eventLabel.text = currentEvent.nameEvent
         self.dateLabel.text = currentEvent.date
         self.daysBeforeTheDaysLabel.text = "через \(currentEvent.daysBeforeTheEvent) дней"
@@ -89,6 +91,6 @@ class DetailTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-  
+    
     
 }
