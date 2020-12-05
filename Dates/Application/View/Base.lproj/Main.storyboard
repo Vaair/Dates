@@ -177,31 +177,35 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Дата" id="KTP-FE-KTg">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IaS-zO-5WE">
-                                        <rect key="frame" x="0.0" y="344.66666793823242" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="205" id="IaS-zO-5WE">
+                                        <rect key="frame" x="0.0" y="344.66666793823242" width="390" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IaS-zO-5WE" id="Vfs-cV-xwh">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="18H-cW-GDf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQY-Uh-NZB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="205"/>
+                                                </pickerView>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-Q7-H2d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="205"/>
                                                     <locale key="locale" localeIdentifier="ru_RU"/>
-                                                    <connections>
-                                                        <action selector="datePickerAction:" destination="Nte-N1-57e" eventType="valueChanged" id="76s-AY-X0o"/>
-                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="18H-cW-GDf" firstAttribute="top" secondItem="Vfs-cV-xwh" secondAttribute="top" id="2tf-Pa-yfr"/>
-                                                <constraint firstItem="18H-cW-GDf" firstAttribute="leading" secondItem="Vfs-cV-xwh" secondAttribute="leading" id="MmO-dl-BAT"/>
-                                                <constraint firstAttribute="bottom" secondItem="18H-cW-GDf" secondAttribute="bottom" id="SKo-bj-2Re"/>
-                                                <constraint firstAttribute="trailing" secondItem="18H-cW-GDf" secondAttribute="trailing" id="Urw-nO-Met"/>
+                                                <constraint firstItem="dQY-Uh-NZB" firstAttribute="top" secondItem="Vfs-cV-xwh" secondAttribute="top" id="9CL-op-qrE"/>
+                                                <constraint firstAttribute="trailing" secondItem="YQa-Q7-H2d" secondAttribute="trailing" id="Akt-n2-wDL"/>
+                                                <constraint firstItem="dQY-Uh-NZB" firstAttribute="leading" secondItem="Vfs-cV-xwh" secondAttribute="leading" id="EuO-6l-686"/>
+                                                <constraint firstAttribute="bottom" secondItem="YQa-Q7-H2d" secondAttribute="bottom" id="W0s-CK-VT9"/>
+                                                <constraint firstItem="YQa-Q7-H2d" firstAttribute="leading" secondItem="Vfs-cV-xwh" secondAttribute="leading" id="WQE-FK-0Je"/>
+                                                <constraint firstAttribute="bottom" secondItem="dQY-Uh-NZB" secondAttribute="bottom" id="fa7-Wr-Cnj"/>
+                                                <constraint firstItem="YQa-Q7-H2d" firstAttribute="top" secondItem="Vfs-cV-xwh" secondAttribute="top" id="uIq-Lg-Mea"/>
+                                                <constraint firstAttribute="trailing" secondItem="dQY-Uh-NZB" secondAttribute="trailing" id="x0v-a6-hIO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="OyM-ev-CJy">
-                                        <rect key="frame" x="0.0" y="388.33333587646484" width="390" height="44"/>
+                                        <rect key="frame" x="0.0" y="549.66666793823242" width="390" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OyM-ev-CJy" id="Hfq-iC-duv">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
@@ -215,6 +219,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QrA-mi-EI0">
                                                     <rect key="frame" x="321" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                                                    <connections>
+                                                        <action selector="hideYear:" destination="Nte-N1-57e" eventType="valueChanged" id="YwL-Ru-d4d"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -238,9 +245,10 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wvs-6G-6Mt"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="datePicker" destination="18H-cW-GDf" id="3Db-RC-2Vz"/>
+                        <outlet property="datePicker" destination="YQa-Q7-H2d" id="Ete-kH-aDI"/>
                         <outlet property="detailImage" destination="swb-aF-fl3" id="s9G-PJ-RsV"/>
                         <outlet property="eventsNameTextField" destination="BHm-cC-dsY" id="kV8-RJ-oic"/>
+                        <outlet property="pickerViewWithoutYears" destination="dQY-Uh-NZB" id="Zer-RN-KPE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="000-Nf-s6U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -250,7 +258,6 @@
         <!--Detail Table View Controller-->
         <scene sceneID="aaK-dI-Uer">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4L0-pI-qVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="C0P-fD-Oki" customClass="DetailTableViewController" customModule="Dates" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="itR-8Z-CLz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -372,6 +379,7 @@
                         <outlet property="iconImage" destination="xOD-H9-DOf" id="4jp-5p-dHm"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4L0-pI-qVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1850.7246376811595" y="-316.07142857142856"/>
         </scene>

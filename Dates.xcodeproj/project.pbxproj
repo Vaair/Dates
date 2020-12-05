@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A4E2D54257BC75700B22C92 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E2D53257BC75700B22C92 /* CustomPickerView.swift */; };
 		3A761198256E6673007F534C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A761197256E6673007F534C /* Event.swift */; };
 		3A7ACDCD254EDBF10013ADC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ACDCC254EDBF10013ADC5 /* AppDelegate.swift */; };
 		3A7ACDCF254EDBF10013ADC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ACDCE254EDBF10013ADC5 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A4E2D53257BC75700B22C92 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 		3A761197256E6673007F534C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3A7ACDC9254EDBF10013ADC5 /* Dates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7ACDCC254EDBF10013ADC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		3A5B52BB256AC57500D414E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A4E2D53257BC75700B22C92 /* CustomPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				3A7ACDF3254EE10B0013ADC5 /* DateCell.swift in Sources */,
 				3ACBB9ED254F2E2A00E2E15B /* EditingTableViewController.swift in Sources */,
 				3A761198256E6673007F534C /* Event.swift in Sources */,
+				3A4E2D54257BC75700B22C92 /* CustomPickerView.swift in Sources */,
 				3A7ACDF0254EE08A0013ADC5 /* TableViewController.swift in Sources */,
 				3A7ACDCF254EDBF10013ADC5 /* SceneDelegate.swift in Sources */,
 			);
